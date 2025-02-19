@@ -6,6 +6,7 @@ import com.esercizio.S7_L3.esercizio2.Sezione;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,11 +31,14 @@ public class S7L3Application {
 
 		// Esercizio2
         Pagine pag = new Pagine("Intro alla morte");
-
+		Pagine pag2 = new Pagine("blaaa");
+		Sezione sez2 = new Sezione("CAP2");
 		Sezione sez = new Sezione("CAPITOLO1");
+		sez2.aggiungiPag(pag2);
 		sez.aggiungiPag(pag);
-		Libro l = new Libro("Baubau",29, Arrays.asList(sez),Arrays.asList("Mauro","Paolo"));
+		Libro l = new Libro("Baubau",29, Arrays.asList(sez,sez2),Arrays.asList("Mauro","Paolo"));
 		l.stampa();
+		System.out.println(l.numeroPagine());
 
 	}
 

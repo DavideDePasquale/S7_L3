@@ -36,7 +36,8 @@ public class Sezione implements MetodiComuni{
     @Override
     public String toString() {
         return "Sezione{" +
-                "listaPagine=" + listaPagine +
+                "contenuto='" + contenuto + '\'' +
+                ", listaPagine=" + listaPagine +
                 '}';
     }
 
@@ -52,8 +53,10 @@ public class Sezione implements MetodiComuni{
 
     @Override
     public void stampa() {
+        System.out.println(contenuto);
         for (Pagine pagina : listaPagine){
-            System.out.println(pagina);
+
+           pagina.stampa();
         }
     }
 }
